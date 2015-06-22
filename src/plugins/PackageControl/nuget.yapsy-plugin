@@ -1,0 +1,8 @@
+[Core]
+Name = NuGet
+Module = nuget
+
+[Documentation]
+Author = SplittyDev
+Version = 1.0
+Description = Nuget package info

@@ -1,0 +1,8 @@
+[Core]
+Name = wisdom
+Module = wisdom
+
+[Documentation]
+Author = SplittyDev
+Version = 1.0
+Description = More or less wise stuff

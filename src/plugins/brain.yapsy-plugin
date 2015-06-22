@@ -1,0 +1,8 @@
+[Core]
+Name = Brain
+Module = brain
+
+[Documentation]
+Author = SplittyDev
+Version = 1.0
+Description = Talky bot using continuous-time markov processing

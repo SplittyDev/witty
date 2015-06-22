@@ -1,0 +1,8 @@
+[Core]
+Name = npm
+Module = npm
+
+[Documentation]
+Author = SplittyDev
+Version = 1.0
+Description = npm package info

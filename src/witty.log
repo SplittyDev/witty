@@ -1,0 +1,177 @@
+DEBUG:yapsy:PluginManagerSingleton initialised
+DEBUG:yapsy:PluginFileLocator walks (recursively) into directory: C:\Users\Splitty\Documents\Projects\python\witty\src\plugins
+DEBUG:yapsy:brain.py is not a valid plugin for strategy info_ext
+DEBUG:yapsy:brain.pyc is not a valid plugin for strategy info_ext
+DEBUG:yapsy:PluginFileLocator found a candidate:
+    C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain.yapsy-plugin
+DEBUG:yapsy:wisdom.py is not a valid plugin for strategy info_ext
+DEBUG:yapsy:wisdom.pyc is not a valid plugin for strategy info_ext
+DEBUG:yapsy:PluginFileLocator found a candidate:
+    C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\wisdom.yapsy-plugin
+DEBUG:yapsy:__init__.py is not a valid plugin for strategy info_ext
+DEBUG:yapsy:logutils.py is not a valid plugin for strategy info_ext
+DEBUG:yapsy:logutils.pyc is not a valid plugin for strategy info_ext
+DEBUG:yapsy:PluginFileLocator found a candidate:
+    C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\Admin\logutils.yapsy-plugin
+DEBUG:yapsy:npm.py is not a valid plugin for strategy info_ext
+DEBUG:yapsy:npm.pyc is not a valid plugin for strategy info_ext
+DEBUG:yapsy:PluginFileLocator found a candidate:
+    C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\PackageControl\npm.yapsy-plugin
+DEBUG:yapsy:nuget.py is not a valid plugin for strategy info_ext
+DEBUG:yapsy:nuget.pyc is not a valid plugin for strategy info_ext
+DEBUG:yapsy:PluginFileLocator found a candidate:
+    C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\PackageControl\nuget.yapsy-plugin
+DEBUG:yapsy:pypi.py is not a valid plugin for strategy info_ext
+DEBUG:yapsy:pypi.pyc is not a valid plugin for strategy info_ext
+DEBUG:yapsy:PluginFileLocator found a candidate:
+    C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\PackageControl\pypi.yapsy-plugin
+DEBUG:yapsy:__init__.py is not a valid plugin for strategy info_ext
+DEBUG:yapsy:Activating plugin: Default.logutils
+DEBUG:yapsy:Activating plugin: Default.npm
+DEBUG:yapsy:Activating plugin: Default.NuGet
+DEBUG:yapsy:Activating plugin: Default.PyPi
+DEBUG:yapsy:Activating plugin: Default.wisdom
+DEBUG:yapsy:Activating plugin: Default.Brain
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Plugins rehashed.
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Plugins rehashed.
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 16719 sentences
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 16719 sentences
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin wisdom
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 16720 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 16744 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Plugins rehashed.
+ERROR:yapsy:Unable to create plugin object: C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\yapsy\PluginManager.py", line 511, in loadPlugins
+    plugin_info.plugin_object = self.instanciateElement(element)
+  File "C:\Python27\lib\site-packages\yapsy\PluginManager.py", line 530, in instanciateElement
+    return element()
+  File "C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain.py", line 21, in __init__
+    self.post_init()
+  File "C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain.py", line 27, in post_init
+    self.ext_brain_save(line, self.chain_length)
+  File "C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain.py", line 40, in ext_brain_save
+    del buf[0]
+IndexError: list assignment index out of range
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 16775 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 16783 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 16787 sentences
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 16798 sentences
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.

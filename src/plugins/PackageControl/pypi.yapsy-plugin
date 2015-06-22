@@ -1,0 +1,8 @@
+[Core]
+Name = PyPi
+Module = pypi
+
+[Documentation]
+Author = SplittyDev
+Version = 1.0
+Description = PyPi package info
