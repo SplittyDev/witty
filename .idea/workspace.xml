@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b4d1824-b9ed-4016-9095-8c1b5693b48f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/PackageControl/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/brain.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/brain.yapsy-plugin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/Admin/logutils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/Admin/logutils.yapsy-plugin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/PackageControl/npm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/PackageControl/npm.yapsy-plugin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/PackageControl/nuget.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/PackageControl/nuget.yapsy-plugin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/PackageControl/pypi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/PackageControl/pypi.yapsy-plugin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/wisdom.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/wisdom.yapsy-plugin" />
-      <change type="MOVED" beforePath="C:\Users\Splitty\Documents\Projects\python\witty\src\ext_brain.txt" afterPath="$PROJECT_DIR$/src/data/ext_brain.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/witty.py" afterPath="$PROJECT_DIR$/src/witty.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/ext_brain.txt" afterPath="$PROJECT_DIR$/src/data/ext_brain.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/normalize_brain.py" afterPath="$PROJECT_DIR$/src/normalize_brain.py" />
     </list>
     <ignored path="witty.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +17,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/witty$witty.coverage" NAME="witty Coverage Results" MODIFIED="1434978211537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/witty$witty.coverage" NAME="witty Coverage Results" MODIFIED="1434985012434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -101,9 +85,9 @@
         <option value="$PROJECT_DIR$/src/plugins/Admin/logutils.yapsy-plugin" />
         <option value="$PROJECT_DIR$/src/witty.py" />
         <option value="$PROJECT_DIR$/src/witty.log" />
-        <option value="$PROJECT_DIR$/src/data/ext_brain.txt" />
         <option value="$PROJECT_DIR$/src/plugins/Admin/logutils.py" />
         <option value="$PROJECT_DIR$/src/plugins/brain.py" />
+        <option value="$PROJECT_DIR$/src/data/ext_brain.txt" />
       </list>
     </option>
   </component>
@@ -659,17 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/ext_brain.txt">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43281472">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/witty.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -695,8 +668,19 @@
         <state vertical-scroll-proportion="0.60113156">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#24#53#0" expanded="true" />
+            <element signature="e#24#53#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/ext_brain.txt">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

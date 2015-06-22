@@ -9,7 +9,7 @@ def main():
     lines = []
     for line in f:
         if line.replace('\r','') != '\n':
-            lines.append(line.replace('\r','').strip())
+            lines.append(line.replace('\r','').replace('"','').strip())
     f.close()
     f = open(path, 'w')
     for line in lines:

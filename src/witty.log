@@ -175,3 +175,15 @@ INFO:root:Initializing plugin PyPi
 INFO:root:Initializing plugin Brain
 INFO:root:Initializing plugin logutils
 INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 37876 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
