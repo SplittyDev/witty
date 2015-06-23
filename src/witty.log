@@ -187,3 +187,823 @@ INFO:root:Joining #int0x10
 INFO:root:Joining #splittys_witness
 INFO:root:Joined channel #int0x10
 INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 107118 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+ERROR:yapsy:Unable to create plugin object: C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\yapsy\PluginManager.py", line 511, in loadPlugins
+    plugin_info.plugin_object = self.instanciateElement(element)
+  File "C:\Python27\lib\site-packages\yapsy\PluginManager.py", line 530, in instanciateElement
+    return element()
+  File "C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain.py", line 21, in __init__
+    self.post_init_new()
+  File "C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain.py", line 32, in post_init_new
+    self.create_db()
+  File "C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain.py", line 41, in create_db
+    for w1, w2, w3 in self.triples():
+ValueError: need more than 2 values to unpack
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 107144 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin Brain
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 107144 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin wisdom
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 107144 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 107144 sentences
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 190144 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 190218 sentences
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 190218 sentences
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 190218 sentences
+INFO:root:Fed the brain with 190219 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 190219 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 190219 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 190222 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 190222 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 190223 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 190223 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 190223 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 190230 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 190233 sentences
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 195388 sentences
+INFO:root:Done!
+INFO:root:Fed the brain with 194385 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 194386 sentences
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 194389 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin NuGet
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 194390 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 194398 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 194402 sentences
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 194415 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 194427 sentences
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 194440 sentences
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 194449 sentences
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 69124 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 69555 sentences
+INFO:root:Done!
+INFO:root:Reloading...
+INFO:root:Fed the brain with 70027 sentences
+INFO:root:Done!
+INFO:root:Reloading...
+INFO:root:Fed the brain with 70757 sentences
+INFO:root:Done!
+INFO:root:Reloading...
+INFO:root:Fed the brain with 73377 sentences
+INFO:root:Done!
+INFO:root:Reloading...
+INFO:root:Fed the brain with 73995 sentences
+INFO:root:Done!
+INFO:root:Reloading...
+INFO:root:Fed the brain with 74478 sentences
+INFO:root:Done!
+INFO:root:Reloading...
+INFO:root:Fed the brain with 75498 sentences
+INFO:root:Done!
+INFO:root:Fed the brain with 71209 sentences
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 71213 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Fed the brain with 71214 sentences
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin NuGet
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 71850 sentences
+INFO:root:Done!
+INFO:root:Reloading...
+INFO:root:Fed the brain with 72831 sentences
+INFO:root:Done!
+INFO:root:Reloading...
+INFO:root:Fed the brain with 73155 sentences
+INFO:root:Done!
+INFO:root:Reloading...
+INFO:root:Fed the brain with 73666 sentences
+INFO:root:Done!
+INFO:root:Fed the brain with 73668 sentences
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 74938 sentences
+INFO:root:Done!
+INFO:root:Fed the brain with 74952 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Reloading...
+INFO:root:Fed the brain with 76253 sentences
+INFO:root:Kicked from #int0x10 by irc.int0x10.com (Channel flood triggered (limit is 5 lines in 3 secs))
+INFO:root:Rejoining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Reloading...
+INFO:root:Fed the brain with 76803 sentences
+INFO:root:Fed the brain with 0 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Reloading...
+INFO:root:Fed the brain with 1299 sentences
+INFO:root:Kicked from #int0x10 by irc.int0x10.com (Channel flood triggered (limit is 5 lines in 3 secs))
+INFO:root:Rejoining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Reloading...
+INFO:root:Fed the brain with 1847 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 2273 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 2835 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 3114 sentences
+INFO:root:Fed the brain with 3117 sentences
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Brain
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 3702 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 4308 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 7948 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 8638 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 8885 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 10633 sentences
+INFO:root:Fed the brain with 10633 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 11264 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 11619 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 15160 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 16121 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 18319 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 20362 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 21087 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 23739 sentences
+INFO:root:Fed the brain with 23739 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 26108 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 26411 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 26919 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 28688 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 29449 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 29815 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 33909 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 34494 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 35073 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 36745 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 37166 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 37252 sentences
+INFO:root:Fed the brain with 37252 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 37390 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 37526 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 37665 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 11695 sentences
+INFO:root:Fed the brain with 11698 sentences
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 11270 sentences
+INFO:root:Fed the brain with 11270 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 11301 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 11430 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 13935 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 14532 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 15224 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 17488 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 19761 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 20924 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 22154 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 22924 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 23289 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 23767 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 28065 sentences
+INFO:root:Fed the brain with 15445 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 18003 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 18690 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 18696 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 19986 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 20464 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 21415 sentences
+INFO:root:Fed the brain with 21418 sentences
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Plugins rehashed.
+ERROR:yapsy:Unable to import plugin: C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\yapsy\PluginManager.py", line 487, in loadPlugins
+    candidate_module = imp.load_module(plugin_module_name,plugin_file,candidate_filepath+".py",("py","r",imp.PY_SOURCE))
+  File "C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain.py", line 93
+    execept Error
+          ^
+SyntaxError: invalid syntax
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 21424 sentences
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 21424 sentences
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 21424 sentences
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 21501 sentences
+INFO:root:Fed the brain with 16517 sentences
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 16519 sentences
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin wisdom
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 74152 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.
+INFO:root:Reloading...
+INFO:root:Fed the brain with 79991 sentences
+INFO:root:Kicked from #int0x10 by irc.int0x10.com (Channel flood triggered (limit is 5 lines in 3 secs))
+INFO:root:Rejoining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Reloading...
+INFO:root:Fed the brain with 84478 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 90061 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 95129 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 100892 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 106556 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 111334 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 116835 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 122138 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 127505 sentences
+INFO:root:Kicked from #int0x10 by irc.int0x10.com (Channel flood triggered (limit is 5 lines in 3 secs))
+INFO:root:Rejoining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Reloading...
+INFO:root:Fed the brain with 134972 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 141571 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 150346 sentences
+INFO:root:Kicked from #int0x10 by irc.int0x10.com (Channel flood triggered (limit is 5 lines in 3 secs))
+INFO:root:Rejoining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Reloading...
+INFO:root:Fed the brain with 154351 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 160493 sentences
+INFO:root:Reloading...
+INFO:root:Fed the brain with 165482 sentences
+INFO:root:Kicked from #int0x10 by irc.int0x10.com (Channel flood triggered (limit is 5 lines in 3 secs))
+INFO:root:Rejoining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Reloading...
+INFO:root:Fed the brain with 166767 sentences
+INFO:root:Kicked from #int0x10 by irc.int0x10.com (Channel flood triggered (limit is 5 lines in 3 secs))
+INFO:root:Rejoining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Fed the brain with 122576 sentences
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin NuGet
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 122579 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin NuGet
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 122579 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 122580 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 122580 sentences
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 122580 sentences
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin wisdom
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 122581 sentences
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin NuGet
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 122609 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 122625 sentences
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 122644 sentences
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin logutils
+INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 122647 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin PyPi
+INFO:root:Plugins rehashed.

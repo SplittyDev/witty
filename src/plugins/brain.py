@@ -1,6 +1,8 @@
 __author__ = 'Splitty'
 
+from bs4 import BeautifulSoup
 from collections import defaultdict
+from urllib2 import urlopen, URLError
 from yapsy.PluginManager import PluginManagerSingleton
 from yapsy.IPlugin import IPlugin
 import logging
@@ -8,10 +10,12 @@ import os
 import random
 import re
 
+
 class BrainPlugin(IPlugin):
     markov = defaultdict(list)
     chain_length = 1
-    chattiness = 250
+    chattiness = 1000
+    block = False
 
     def __init__(self):
         self.manager = PluginManagerSingleton.get()
@@ -21,6 +25,7 @@ class BrainPlugin(IPlugin):
         self.post_init()
 
     def post_init(self):
+        self.markov.clear()
         f = open(self.data_path, 'r')
         count = 0
         for line in f:
@@ -41,8 +46,8 @@ class BrainPlugin(IPlugin):
             buf.append(word)
         self.markov[tuple(buf)].append('\n')
 
-    def ext_brain_gen(self, msg, length, min_words=2, max_words=25):
-        buf = msg.split()[:length]
+    def ext_brain_gen(self, msg, length, min_words=2, max_words=10):
+        buf = [random.choice(msg.split())]
         if len(str(msg).split()) > length:
             message = buf[:]
         else:
@@ -63,7 +68,42 @@ class BrainPlugin(IPlugin):
             message.append(random.choice(self.markov[tuple(buf)]))
         return ' '.join(message)
 
+    def normalizedb(self):
+        f = open(self.data_path, 'r+')
+        lines = []
+        for line in f:
+            newline = line.replace('\r', '').strip()
+            if newline != '\n':
+                lines.append(newline)
+        f.seek(0)
+        for line in lines:
+            f.write('%s\n' % line.strip())
+        f.truncate()
+        f.close()
+
     def privmsg(self, user, channel, msg):
+        if self.block:
+            return
+        if msg.startswith('_feed'):
+            self.block = True
+            url = msg[5:].strip()
+            self.manager.app.say(channel, 'Eating %s...' % url)
+            try:
+                html = urlopen(url)
+            except URLError, e:
+                self.manager.app.say(channel, e)
+                return
+            soup = BeautifulSoup(html)
+            text = soup.getText()
+            f = open(self.data_path, 'a')
+            f.write(text.encode('ascii', 'ignore'))
+            f.close()
+            logging.info('Reloading...')
+            self.manager.app.say(channel, 'Normalizing db...')
+            self.normalizedb()
+            self.post_init()
+            self.manager.app.say(channel, 'Done. So much wisdom!')
+            self.block = False
         if msg.startswith('_chattiness'):
             self.chattiness = int(str(msg[11:]).strip())
             self.manager.app.say(channel, 'Set chattiness to %s%%' % str(int((self.chattiness / 1000.0) * 100)))
