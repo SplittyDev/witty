@@ -7,7 +7,7 @@ from yapsy.IPlugin import IPlugin
 class LogUtilsPlugin(IPlugin):
     def privmsg(self, user, channel, msg):
         manager = PluginManagerSingleton.get()
-        if channel == manager.app.nickname and msg.startswith ('_log'):
+        if msg.startswith('_log'):
             f = open('witty.log', 'r')
             lines = []
             for line in f:
