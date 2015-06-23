@@ -4,6 +4,7 @@ __author__ = 'Splitty'
 import json
 import logging
 from os import path
+import sys
 from twisted.words.protocols import irc
 from twisted.internet import protocol, reactor, ssl
 from yapsy.PluginManager import PluginManagerSingleton
@@ -51,6 +52,11 @@ class WittyBot(irc.IRCClient):
         logging.info('Kicked from %s by %s (%s). Rejoining.' % (channel, kicker, message))
         self.join(str(channel))
 
+    def quit(self, message=''):
+        self.update_config()
+        self.factory.quit = True
+        irc.IRCClient.quit(self, message)
+
     def privmsg(self, user, channel, msg):
         username = user[:user.index('!')]
         for plugin in self.manager.getAllPlugins():
@@ -61,6 +67,7 @@ class WittyBotFactory(protocol.ClientFactory):
     protocol = WittyBot
 
     def __init__(self, config):
+        self.quit = False
         self.config = config
         self.channels = ','.join(self.config['witty']['auto_join'])
 
@@ -69,6 +76,9 @@ class WittyBotFactory(protocol.ClientFactory):
         reactor.stop()
 
     def clientConnectionLost(self, connector, reason):
+        if self.quit:
+            reactor.stop()
+        return
         logging.info('Lost connection (%s), reconnecting.' % reason)
         connector.connect()
 
@@ -83,6 +93,10 @@ if __name__ == '__main__':
                 'ssl': True,
                 'auto_join': [
                     '#int0x10'
+                ],
+                'administrators': [
+                    'splitty_',
+                    '[mobile]splitty_'
                 ]
             },
             'plugins': {

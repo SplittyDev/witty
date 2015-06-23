@@ -942,3 +942,110 @@ Aurora01: _log 10 will give you the 10 latest log entries :D
 Fun fact:
 In spite of how allegedly good western intel programs are
 WE STILL DON'T KNOW HOW RUSSIA GOT SUPERMANEUVERABILITY
+Do you actually listen to what you say?
+no, I read and write it mostly when I'm on irc
+ser_berry, you know what I meant.
+Fuchs, how can I do that?
+tortib: to achieve what you want to do you'd need a bot with +o in your channel and, that's the tricky part, it'd need to be in the other channel, too
+which I doubt the ops of that channel would like to see
+yea
+tortib: so there isn't really a way
+lol what are you talking about
+[17:50] <> see the one make me be here who had a friend lolwut
+Banning people from a channel purely because they're in another channel seems rather petty, also
+Fuchs: no, you could join the other channel from a different connection
+Equinoxdawg, Nobody asked you.
+tortib: Nobody needed to.
+Fuchs: you shouldn't join it with the same connection because that would break the rule that nobody can be on both channels
+b_jonas: that connection would have to talk to that bot though, and it's still highly unlikely the channel ops wanted that to happen
+Fuchs: sure, the same bot connecting twice is the easiest for that
+but yes, if the other channel kicks all your connections there then you can't do it anymore
+Interesting read error.
+b_jonas: and it's still, in my opinion, a bad idea and highly unlikely to work. And adding it as a feature raises some privacy and also performance concerns, so I don't see that happening for the limited amount of usecases it covers
+hi
+Hey nikx
+What's up?
+Fuchs: sure
+nothing
+wtf
+Okay :D
+Fuchs, how does it raise privacy concerns?
+it doesnt
+I know it doesn't
+I want to see what his answer is
+i have no idea what you are talking about actually
+xP
+tortib: you can get an easy, automatable way to check whether a user is in channel $x without being in that channel
+currently this is not possible when the users have +i set, which is the default
+Fuchs, how if the user is +i?
+I told you i don't want to do it based on user
+I want to do it based on channel
+confirmed for markov bot
+tortib: yes, but it still applies. You ban on "everybody who is in channel $x", so if user $y can't join your channel, you know that he is in channel $x
+Markov bot?
+lel
+tortib: given you can set these bans while users are in a channel and check for matches, this is going to be quite abusable, especially as the +b list is rather dynamic and big enough for automating that
+First you said it would raise privacy concerns and performance issues and haven't explained why it would.  Now you're saying it would be abuseable.
+Yes, including an explanation of how to abuse it
+the +b list being dynamic has nothing to do with automation
+for it to be automated you would require a user in each channel
+a bot
+which is also magically the explanation of why it raises privacy issues, because it can be used to see if a user is in a specific channel without having to be in that channel, which is exactly what the +i umode makes impossible
+And how would the operators/founders of that channel know if someone is joining their channel if they're automatically not allowed to join that channel?
+no you don't, it is fully sufficient to have one in your channel which is able to set that type of ban you want to, then check if there is a match on a user. If yes, then the user is in the channel you set that ban based on.
+They wouldn't have any information about it because the freenode server would automatically deny them from entering that channel
+You can't check if the user is in that channel without a bot being in that other channel
+We just went over this
+tortib: not exactly true, especially due to how +b behaves when it matches a user actually in a channel, in addition with +z as well.
+tortib: it can be abused, it would be quite bad performance-wise and there are no sane use cases for it, so I doubt it will be added, really
+Fuchs, how would it affect performance?
+would the owner of please remove it or make it stop talking, that'd be nice
+And I don't see how it would be abused.
+hello
+There's an extban to do this, and we choose not to load it because of some of the reasons mentioned. End of conversation? (I hope)
+how can i tell if i am connected with ssl? i'm not sure if it worked
+roo, which reasons?
+tortib: well, I explained it, whether you agree on it or not is unfortunately not something I can control. As for performance: it would have to check, if such a ban is set, whether users trying to join are in specific channels, which adds unneeded load.
+roo
+You shouldn't be able to connect at all to port 6697 without ssl
+ccb12: you are
+can you cloak me
+I my mind serves me right
+ccb12: you can whois yourself or check your modes
+xzx12: no
+ccb12: /whois yourself, and look for "is using a secure connection"
+ccb12: you'll have a +Z if you are connected via SSL
+ccb12: or the line roo mentioned
+is says [ccb12] is using a secure connection
+mquin but after 2 weeks, yes ?
+Fuchs, roo, thanks
+tortib: it's been years, but personally my main concerns are privacy, and no good reason for needing it
+roo / mquin, if you could remove that silly bot, that would be lovely ♥
+^
+xzx12: provided you stop trying to waste our time between now and then
+roo, I don't see how it would cause privacy concerns?
+roo, can you explain it to me like I'm 5 years old?
+tortib: It'd be ineffective as the majority of our users are +i. Were it modified to actually work as intended, it could be used leak channel membership information, which we don't see as being acceptbale
+splitty_: please get rid of 
+hi, are you a person?
+Nope
+lel
+Great
+oops
+What would Jesus do?
+What does the Lord say?
+Also, why should I not pass?
+you are weird
+Thank you :D
+If you say so
+What should I try?
+Indeed it is
+lol
+Are you sure about that?
+He'll what? What will he, what?
+splitty_: Is hitting on me? It's pickup lines are not that great
+lol
+TheBrokenKeeper, please try to _quit it
+Perfect.
+I see!
+:(

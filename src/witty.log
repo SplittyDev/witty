@@ -1173,3 +1173,27 @@ INFO:root:Connected to server.
 INFO:root:Fed the brain with 744 sentences
 INFO:root:Kicked from #int0x10 by irc.int0x10.com (Channel flood triggered (limit is 5 lines in 3 secs)). Rejoining.
 INFO:root:Fed the brain with 841 sentences
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 944 sentences
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 1031 sentences
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 1031 sentences
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 1031 sentences
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 1031 sentences
+INFO:root:Lost connection ([Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionDone'>: Connection was closed cleanly.
+]), reconnecting.
+INFO:root:Connected to server.
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 1032 sentences
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 1032 sentences
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 1032 sentences
+INFO:root:Fed the brain with 1040 sentences
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 1050 sentences
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 1050 sentences

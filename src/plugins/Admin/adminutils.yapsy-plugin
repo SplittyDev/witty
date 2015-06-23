@@ -1,0 +1,8 @@
+[Core]
+Name = Admin utilities
+Module = adminutils
+
+[Documentation]
+Author = SplittyDev
+Version = 1.0
+Description = Provides basic admin commands
