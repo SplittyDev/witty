@@ -6,7 +6,7 @@ from urllib2 import urlopen, URLError
 from yapsy.PluginManager import PluginManagerSingleton
 from yapsy.IPlugin import IPlugin
 
-class NineGagPlugin(IPlugin):
+class ImgurPlugin(IPlugin):
     def privmsg(self, user, channel, msg):
         manager = PluginManagerSingleton.get()
         expr = '.*http(?:s)?://(?:w{3}\.)?imgur.com/gallery/(?P<id>[0-9a-zA-Z_]*).*'

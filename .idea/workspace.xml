@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b4d1824-b9ed-4016-9095-8c1b5693b48f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/Social/imgur.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/Social/imgur.yapsy-plugin" />
-      <change type="MOVED" beforePath="C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\Other\9gag.py" afterPath="$PROJECT_DIR$/src/plugins/Social/9gag.py" />
-      <change type="MOVED" beforePath="C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\Other\9gag.yapsy-plugin" afterPath="$PROJECT_DIR$/src/plugins/Social/9gag.yapsy-plugin" />
-      <change type="MOVED" beforePath="C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\Other\youtube.py" afterPath="$PROJECT_DIR$/src/plugins/Social/youtube.py" />
-      <change type="MOVED" beforePath="C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\Other\youtube.yapsy-plugin" afterPath="$PROJECT_DIR$/src/plugins/Social/youtube.yapsy-plugin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugins/Admin/logutils.py" afterPath="$PROJECT_DIR$/src/plugins/Admin/logutils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/Social/reddit.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/Social/reddit.yapsy-plugin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugins/Social/imgur.py" afterPath="$PROJECT_DIR$/src/plugins/Social/imgur.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugins/Social/youtube.py" afterPath="$PROJECT_DIR$/src/plugins/Social/youtube.py" />
     </list>
     <ignored path="witty.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,18 +32,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="youtube.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/plugins/Social/youtube.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="e#24#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="logutils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/plugins/Admin/logutils.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -59,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imgur.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/plugins/Social/imgur.py">
+      <file leaf-file-name="reddit.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/plugins/Social/reddit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42088267">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.45748118">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -114,7 +99,10 @@
         <option value="$PROJECT_DIR$/src/plugins/Admin/logutils.py" />
         <option value="$PROJECT_DIR$/src/plugins/Social/imgur.yapsy-plugin" />
         <option value="$PROJECT_DIR$/src/plugins/Social/9gag.py" />
+        <option value="$PROJECT_DIR$/src/plugins/Social/youtube.py" />
+        <option value="$PROJECT_DIR$/src/plugins/Social/reddit.yapsy-plugin" />
         <option value="$PROJECT_DIR$/src/plugins/Social/imgur.py" />
+        <option value="$PROJECT_DIR$/src/plugins/Social/reddit.py" />
       </list>
     </option>
   </component>
@@ -669,7 +657,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435064302329</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Rearranged plugins; Added imgur plugin">
+      <created>1435065100796</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1435065100796</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -711,7 +705,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added 9gag plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added 9gag plugin" />
+    <MESSAGE value="Rearranged plugins; Added imgur plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rearranged plugins; Added imgur plugin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -876,6 +871,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16831683">
           <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -904,31 +900,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/plugins/Admin/logutils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/plugins/Social/imgur.yapsy-plugin">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12809473">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/plugins/Social/youtube.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -940,10 +916,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugins/Social/youtube.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20129171">
+          <caret line="11" column="95" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="95" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugins/Social/reddit.yapsy-plugin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12809473">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugins/Admin/logutils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/plugins/Social/imgur.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42088267">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.10979548">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugins/Social/reddit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45748118">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
