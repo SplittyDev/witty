@@ -20,6 +20,8 @@ class BrainPlugin(IPlugin):
         self.manager = PluginManagerSingleton.get()
         self.data_dir = self.manager.app.data_dir
         self.data_path = os.path.join(self.data_dir, 'ext_brain.txt')
+        if not os.path.isfile(self.data_path):
+            open(self.data_path, 'a').close()
         self.chattiness = self.manager.app.config['plugins']['brain']['chattiness']
         super(BrainPlugin, self).__init__()
         self.post_init()

@@ -3,7 +3,7 @@ __author__ = 'Splitty'
 
 import json
 import logging
-from os import path
+from os import makedirs, path
 import sys
 from twisted.words.protocols import irc
 from twisted.internet import protocol, reactor, ssl
@@ -19,6 +19,8 @@ class WittyBot(irc.IRCClient):
         self.nickname = 'witty'
         self.current_dir = path.abspath(path.dirname(__file__))
         self.data_dir = path.join(self.current_dir, 'data')
+        if not path.exists(self.data_dir):
+            makedirs(self.data_dir)
 
     def load_plugins(self):
         plugin_dir = path.join(self.current_dir, 'plugins')

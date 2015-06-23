@@ -1,4 +1,9 @@
-# Created by https://www.gitignore.io
+### Witty ###
+# Default config
+config.json
+
+# Plugin data
+src/data/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
