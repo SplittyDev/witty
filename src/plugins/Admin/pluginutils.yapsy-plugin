@@ -1,0 +1,8 @@
+[Core]
+Name = Plugin utilities
+Module = pluginutils
+
+[Documentation]
+Author = SplittyDev
+Version = 1.0
+Description = Utilities for working with plugins

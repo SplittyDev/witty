@@ -1,5 +1,5 @@
 [Core]
-Name = logutils
+Name = Logging utilities
 Module = logutils
 
 [Documentation]

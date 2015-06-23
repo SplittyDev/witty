@@ -14,13 +14,13 @@ import re
 class BrainPlugin(IPlugin):
     markov = defaultdict(list)
     chain_length = 1
-    chattiness = 1000
     block = False
 
     def __init__(self):
         self.manager = PluginManagerSingleton.get()
         self.data_dir = self.manager.app.data_dir
         self.data_path = os.path.join(self.data_dir, 'ext_brain.txt')
+        self.chattiness = self.manager.app.config['plugins']['brain']['chattiness']
         super(BrainPlugin, self).__init__()
         self.post_init()
 
@@ -68,19 +68,6 @@ class BrainPlugin(IPlugin):
             message.append(random.choice(self.markov[tuple(buf)]))
         return ' '.join(message)
 
-    def normalizedb(self):
-        f = open(self.data_path, 'r+')
-        lines = []
-        for line in f:
-            newline = line.replace('\r', '').strip()
-            if newline != '\n':
-                lines.append(newline)
-        f.seek(0)
-        for line in lines:
-            f.write('%s\n' % line.strip())
-        f.truncate()
-        f.close()
-
     def privmsg(self, user, channel, msg):
         if self.block:
             return
@@ -99,13 +86,15 @@ class BrainPlugin(IPlugin):
             f.write(text.encode('ascii', 'ignore'))
             f.close()
             logging.info('Reloading...')
-            self.manager.app.say(channel, 'Normalizing db...')
-            self.normalizedb()
             self.post_init()
             self.manager.app.say(channel, 'Done. So much wisdom!')
             self.block = False
-        if msg.startswith('_chattiness'):
+        if msg == '_chattiness':
+            self.manager.app.say(channel, 'Chattiness is at %s%%' % str(int((self.chattiness / 1000.0) * 100)))
+        elif msg.startswith('_chattiness'):
             self.chattiness = int(str(msg[11:]).strip())
+            self.manager.app.config['plugins']['brain']['chattiness'] = int(self.chattiness)
+            self.manager.app.update_config()
             self.manager.app.say(channel, 'Set chattiness to %s%%' % str(int((self.chattiness / 1000.0) * 100)))
         if not user or user == self.manager.app.nickname or msg.startswith('_'):
             return

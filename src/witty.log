@@ -1034,3 +1034,142 @@ INFO:root:Joined channel #splittys_witness
 INFO:root:Kicked from #int0x10 by irc.int0x10.com (Channel flood triggered (limit is 5 lines in 3 secs))
 INFO:root:Rejoining #int0x10
 INFO:root:Joined channel #int0x10
+INFO:root:Fed the brain with 676 sentences
+INFO:root:Initializing plugin logutils
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin Reddit
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin 9gag
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin imgur
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Fed the brain with 706 sentences
+INFO:root:Initializing plugin Reddit
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Logging utilities
+INFO:root:Initializing plugin Plugin utilities
+INFO:root:Initializing plugin imgur
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin 9gag
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Fed the brain with 706 sentences
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin imgur
+INFO:root:Initializing plugin 9gag
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Plugin utilities
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Logging utilities
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin Reddit
+INFO:root:Initializing plugin NuGet
+ERROR:yapsy:Unable to create plugin object: C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\yapsy\PluginManager.py", line 511, in loadPlugins
+    plugin_info.plugin_object = self.instanciateElement(element)
+  File "C:\Python27\lib\site-packages\yapsy\PluginManager.py", line 530, in instanciateElement
+    return element()
+  File "C:\Users\Splitty\Documents\Projects\python\witty\src\plugins\brain.py", line 23, in __init__
+    self.chattiness = self.manager.app.config['plugins']['brain']['chattiness']
+AttributeError: WittyBot instance has no attribute 'config'
+INFO:root:Initializing plugin Reddit
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Logging utilities
+INFO:root:Initializing plugin Plugin utilities
+INFO:root:Initializing plugin imgur
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin 9gag
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joined channel #int0x10
+ERROR:root:Failed to connect: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectError'>: An error occurred while connecting: [Failure instance: Traceback (failure with no frames): <type 'exceptions.AttributeError'>: WittyBot instance has no attribute 'factory'
+].
+]
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 709 sentences
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin imgur
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Reddit
+INFO:root:Initializing plugin Plugin utilities
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin Logging utilities
+INFO:root:Initializing plugin 9gag
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Joining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Fed the brain with 710 sentences
+INFO:root:Initializing plugin Reddit
+INFO:root:Initializing plugin imgur
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin 9gag
+INFO:root:Initializing plugin Logging utilities
+INFO:root:Initializing plugin Plugin utilities
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 719 sentences
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin imgur
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin 9gag
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Reddit
+INFO:root:Initializing plugin Plugin utilities
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin Logging utilities
+INFO:root:Joining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 721 sentences
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin 9gag
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin Reddit
+INFO:root:Initializing plugin Plugin utilities
+INFO:root:Initializing plugin Logging utilities
+INFO:root:Initializing plugin imgur
+INFO:root:Joining #int0x10
+INFO:root:Joined channel #int0x10
+INFO:root:Fed the brain with 726 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin Logging utilities
+INFO:root:Initializing plugin Plugin utilities
+INFO:root:Initializing plugin 9gag
+INFO:root:Initializing plugin imgur
+INFO:root:Initializing plugin Reddit
+INFO:root:Connected to server.
+INFO:root:Fed the brain with 744 sentences
+INFO:root:Kicked from #int0x10 by irc.int0x10.com (Channel flood triggered (limit is 5 lines in 3 secs)). Rejoining.
+INFO:root:Fed the brain with 841 sentences

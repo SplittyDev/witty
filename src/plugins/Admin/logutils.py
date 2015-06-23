@@ -19,7 +19,9 @@ class LogUtilsPlugin(IPlugin):
                 manager.app.msg(user, '%s is not a number.' % str(msg[5:].strip()))
                 return
             if count <= len(lines):
+                result = []
                 for i in range(len(lines) - count, len(lines), 1):
-                    manager.app.msg(user, '%i %s' % (i, lines[i]))
+                    result.append('%i %s' % (i, lines[i]))
+                manager.app.msg(user, '\n'.join(result))
             else:
                 manager.app.msg(user, 'Only %i lines in witty.log' % len(lines))

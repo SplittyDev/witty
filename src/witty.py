@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 __author__ = 'Splitty'
 
-import random
-from argparse import ArgumentParser
+import json
 import logging
-import os
+from os import path
 from twisted.words.protocols import irc
 from twisted.internet import protocol, reactor, ssl
 from yapsy.PluginManager import PluginManagerSingleton
@@ -12,47 +11,48 @@ from yapsy.PluginManager import PluginManagerSingleton
 
 class WittyBot(irc.IRCClient):
     data_dir = ''
+    config = None
     manager = None
 
     def __init__(self):
         self.nickname = 'witty'
-        self.current_dir = os.path.abspath(os.path.dirname(__file__))
-        self.data_dir = os.path.join(self.current_dir, 'data')
-        self.load_plugins()
+        self.current_dir = path.abspath(path.dirname(__file__))
+        self.data_dir = path.join(self.current_dir, 'data')
 
     def load_plugins(self):
-        plugin_dir = os.path.join(self.current_dir, 'plugins')
+        plugin_dir = path.join(self.current_dir, 'plugins')
         self.manager = PluginManagerSingleton.get()
         self.manager.app = self
         self.manager.setPluginPlaces([plugin_dir])
         self.manager.collectPlugins()
         for plugin in self.manager.getAllPlugins():
-            logging.info('Initializing plugin %s' % plugin.name)
+            logging.debug('Initializing plugin %s' % plugin.name)
             self.manager.activatePluginByName(plugin.name)
+
+    def update_config(self):
+        with open('config.json', 'w') as fconfig:
+            json.dump(self.config, fconfig, indent=4, sort_keys=True)
 
     def connectionMade(self):
         logging.info('Connected to server.')
         irc.IRCClient.connectionMade(self)
 
     def signedOn(self):
+        self.config = self.factory.config
+        self.load_plugins()
         for chan in str(self.factory.channels).split(','):
-            logging.info('Joining %s' % chan)
+            logging.debug('Joining %s' % chan)
             self.join(str(chan))
 
     def joined(self, chan):
-        logging.info('Joined channel %s' % chan)
+        logging.debug('Joined channel %s' % chan)
 
     def kickedFrom(self, channel, kicker, message):
-        logging.info('Kicked from %s by %s (%s)' % (channel, kicker, message))
-        logging.info('Rejoining %s' % channel)
+        logging.info('Kicked from %s by %s (%s). Rejoining.' % (channel, kicker, message))
         self.join(str(channel))
 
     def privmsg(self, user, channel, msg):
         username = user[:user.index('!')]
-        if msg == '_rehash':
-            PluginManagerSingleton._PluginManagerSingleton__instance = None
-            self.load_plugins()
-            logging.info('Plugins rehashed.')
         for plugin in self.manager.getAllPlugins():
             if hasattr(plugin.plugin_object, 'privmsg'):
                 plugin.plugin_object.privmsg(username, channel, msg)
@@ -60,8 +60,9 @@ class WittyBot(irc.IRCClient):
 class WittyBotFactory(protocol.ClientFactory):
     protocol = WittyBot
 
-    def __init__(self, chan):
-        self.channels = chan
+    def __init__(self, config):
+        self.config = config
+        self.channels = ','.join(self.config['witty']['auto_join'])
 
     def clientConnectionFailed(self, connector, reason):
         logging.error('Failed to connect: %s' % reason)
@@ -74,23 +75,29 @@ class WittyBotFactory(protocol.ClientFactory):
 
 if __name__ == '__main__':
     logging.basicConfig(filename='witty.log', level=logging.INFO)
-    parser = ArgumentParser(description='Witty IRC bot')
-    parser.add_argument('-s', '--server', type=str, help='IRC server')
-    parser.add_argument('-p', '--port', type=int, help='IRC port')
-    parser.add_argument('-j', '--join', type=str, help='Channels to join')
-    parser.add_argument('--ssl', action='store_true', help='Enable SSL')
-    args = parser.parse_args()
-    server = args.server
-    port = args.port
-    channels = args.join
-    usessl = args.ssl
-    if ':' in server:
-        port = int(server[str(server).index(':') + 1:])
-        server = server[:str(server).index(':')]
-    print ('%s:%i %s %s' % (server, port, channels, 'ssl' if usessl else ''))
-    witty = WittyBotFactory(channels)
-    if usessl:
-        reactor.connectSSL(server, port, witty, ssl.ClientContextFactory())
+    if not path.isfile('config.json'):
+        default_config = {
+            'witty': {
+                'host': 'int0x10.com',
+                'port': 6697,
+                'ssl': True,
+                'auto_join': [
+                    '#int0x10'
+                ]
+            },
+            'plugins': {
+                'brain': {
+                    'chattiness': 250
+                }
+            }
+        }
+        with open('config.json', 'w') as f:
+            json.dump(default_config, f, indent=4, sort_keys=True)
+    with open('config.json', 'r') as f:
+        config = json.load(f)
+    witty = WittyBotFactory(config)
+    if config['witty']['ssl']:
+        reactor.connectSSL(config['witty']['host'], config['witty']['port'], witty, ssl.ClientContextFactory())
     else:
-        reactor.connectTCP(server, port, witty)
+        reactor.connectTCP(config['witty']['host'], config['witty']['port'], config, witty)
     reactor.run()
