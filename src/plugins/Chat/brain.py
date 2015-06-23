@@ -32,7 +32,6 @@ class BrainPlugin(IPlugin):
             self.ext_brain_save(line, self.chain_length)
             count += 1
         f.close()
-        logging.info('Fed the brain with %i sentences' % count)
 
     def ext_brain_save(self, msg, length, save_to_file=False):
         if save_to_file:

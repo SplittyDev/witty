@@ -1,0 +1,19 @@
+{
+    "plugins": {
+        "brain": {
+            "chattiness": 100
+        }
+    }, 
+    "witty": {
+        "administrators": [
+            "splitty_", 
+            "[mobile]splitty_"
+        ], 
+        "auto_join": [
+            "#int0x10"
+        ], 
+        "host": "int0x10.com", 
+        "port": 6697, 
+        "ssl": true
+    }
+}
