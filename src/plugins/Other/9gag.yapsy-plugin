@@ -1,0 +1,8 @@
+[Core]
+Name = 9gag
+Module = 9gag
+
+[Documentation]
+Author = SplittyDev
+Version = 1.0
+Description = 9gag URL handler
