@@ -107,6 +107,8 @@ if __name__ == '__main__':
         }
         with open('config.json', 'w') as f:
             json.dump(default_config, f, indent=4, sort_keys=True)
+        print('Created default config at ./config.json')
+        sys.exit(0)
     with open('config.json', 'r') as f:
         config = json.load(f)
     witty = WittyBotFactory(config)
