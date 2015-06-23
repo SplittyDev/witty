@@ -1007,3 +1007,30 @@ INFO:root:Initializing plugin YouTube
 INFO:root:Initializing plugin logutils
 INFO:root:Initializing plugin PyPi
 INFO:root:Plugins rehashed.
+INFO:root:Fed the brain with 122933 sentences
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin logutils
+INFO:root:Connected to server.
+INFO:root:Lost connection ([Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+]), reconnecting.
+INFO:root:Fed the brain with 9 sentences
+INFO:root:Initializing plugin Brain
+INFO:root:Initializing plugin npm
+INFO:root:Initializing plugin NuGet
+INFO:root:Initializing plugin wisdom
+INFO:root:Initializing plugin PyPi
+INFO:root:Initializing plugin YouTube
+INFO:root:Initializing plugin logutils
+INFO:root:Connected to server.
+INFO:root:Joining #int0x10
+INFO:root:Joining #splittys_witness
+INFO:root:Joined channel #int0x10
+INFO:root:Joined channel #splittys_witness
+INFO:root:Kicked from #int0x10 by irc.int0x10.com (Channel flood triggered (limit is 5 lines in 3 secs))
+INFO:root:Rejoining #int0x10
+INFO:root:Joined channel #int0x10
