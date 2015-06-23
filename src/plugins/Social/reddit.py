@@ -22,4 +22,4 @@ class RedditPlugin(IPlugin):
                 return
             soup = BeautifulSoup(html)
             title = soup.find('a', {'class': 'title'}).contents[0]
-            manager.app.say(channel, 'Title: %s' % str(title).replace('\n', '').strip())
+            manager.app.say(channel, 'Title: %s' % str(title).replace('"', '').strip())

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b4d1824-b9ed-4016-9095-8c1b5693b48f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/Social/reddit.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugins/Social/reddit.yapsy-plugin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugins/Social/imgur.py" afterPath="$PROJECT_DIR$/src/plugins/Social/imgur.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugins/Social/reddit.py" afterPath="$PROJECT_DIR$/src/plugins/Social/reddit.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugins/Social/youtube.py" afterPath="$PROJECT_DIR$/src/plugins/Social/youtube.py" />
     </list>
     <ignored path="witty.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +44,8 @@
       <file leaf-file-name="reddit.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/plugins/Social/reddit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45748118">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.43918192">
+              <caret line="24" column="72" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -663,7 +660,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435065100796</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added reddit plugin">
+      <created>1435066220607</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1435066220607</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -706,7 +709,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added 9gag plugin" />
     <MESSAGE value="Rearranged plugins; Added imgur plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rearranged plugins; Added imgur plugin" />
+    <MESSAGE value="Added reddit plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added reddit plugin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -956,8 +960,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/plugins/Social/reddit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45748118">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43918192">
+          <caret line="24" column="72" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
