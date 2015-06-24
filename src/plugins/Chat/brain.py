@@ -3,6 +3,7 @@ __author__ = 'Splitty'
 from bs4 import BeautifulSoup
 from collections import defaultdict
 from urllib2 import urlopen, URLError
+from witty import WittyConf
 from yapsy.PluginManager import PluginManagerSingleton
 from yapsy.IPlugin import IPlugin
 import logging
@@ -12,18 +13,29 @@ import re
 
 
 class BrainPlugin(IPlugin):
-    markov = defaultdict(list)
-    chain_length = 1
     block = False
+    chain_length = 1
+    chattiness = 100
+    config = None
+    data_path = None
+    data_dir = None
+    manager = None
+    markov = defaultdict(list)
+    plugin_name = None
 
     def __init__(self):
+        self.default_config = {
+            'chattiness': 100
+        }
+        super(BrainPlugin, self).__init__()
+
+    def init(self):
+        self.chattiness = self.config['chattiness']
         self.manager = PluginManagerSingleton.get()
         self.data_dir = self.manager.app.data_dir
         self.data_path = os.path.join(self.data_dir, 'ext_brain.txt')
         if not os.path.isfile(self.data_path):
             open(self.data_path, 'a').close()
-        self.chattiness = self.manager.app.config['plugins']['brain']['chattiness']
-        super(BrainPlugin, self).__init__()
         self.post_init()
 
     def post_init(self):
@@ -94,8 +106,13 @@ class BrainPlugin(IPlugin):
             self.manager.app.say(channel, 'Chattiness is at %s%%' % str(int((self.chattiness / 1000.0) * 100)))
         elif msg.startswith('_chattiness'):
             self.chattiness = int(str(msg[11:]).strip())
-            self.manager.app.config['plugins']['brain']['chattiness'] = int(self.chattiness)
-            self.manager.app.update_config()
+            self.config['chattiness'] = int(self.chattiness)
+
+            #
+            # Exception happens here
+            WittyConf.update_plugin_config(self.plugin_name, self.config)
+            #
+
             self.manager.app.say(channel, 'Set chattiness to %s%%' % str(int((self.chattiness / 1000.0) * 100)))
         if not user or user == self.manager.app.nickname or msg.startswith('_'):
             return
