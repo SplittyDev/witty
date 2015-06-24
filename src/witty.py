@@ -28,6 +28,7 @@ class WittyBot(irc.IRCClient):
         self.manager.app = self
         self.manager.setPluginPlaces([plugin_dir])
         self.manager.collectPlugins()
+        self.manager.wittyconf = WittyConf.get()
         for plugin in self.manager.getAllPlugins():
             logging.debug('Initializing plugin %s' % plugin.name)
             self.manager.activatePluginByName(plugin.name)
@@ -97,7 +98,7 @@ class WittyConf():
 
     def update_config(self):
         with open('config.json', 'w') as fconfig:
-            json.dump(WittyConf.config, fconfig, indent=4, sort_keys=True)
+            json.dump(self.config, fconfig, indent=4, sort_keys=True)
 
     def update_plugin_config(self, plugin_name, new_config):
         print(self.config)

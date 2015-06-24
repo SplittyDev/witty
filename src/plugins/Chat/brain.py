@@ -107,12 +107,7 @@ class BrainPlugin(IPlugin):
         elif msg.startswith('_chattiness'):
             self.chattiness = int(str(msg[11:]).strip())
             self.config['chattiness'] = int(self.chattiness)
-
-            #
-            # Exception happens here
-            WittyConf.get().update_plugin_config(self.plugin_name, self.config)
-            #
-
+            self.manager.wittyconf.update_plugin_config(self.plugin_name, self.config)
             self.manager.app.say(channel, 'Set chattiness to %s%%' % str(int((self.chattiness / 1000.0) * 100)))
         if not user or user == self.manager.app.nickname or msg.startswith('_'):
             return
