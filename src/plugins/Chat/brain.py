@@ -110,7 +110,7 @@ class BrainPlugin(IPlugin):
 
             #
             # Exception happens here
-            WittyConf.update_plugin_config(self.plugin_name, self.config)
+            WittyConf.get().update_plugin_config(self.plugin_name, self.config)
             #
 
             self.manager.app.say(channel, 'Set chattiness to %s%%' % str(int((self.chattiness / 1000.0) * 100)))

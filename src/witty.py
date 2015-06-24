@@ -12,11 +12,10 @@ from yapsy.PluginManager import PluginManagerSingleton
 
 class WittyBot(irc.IRCClient):
     data_dir = ''
-    config = None
     manager = None
 
     def __init__(self):
-        self.nickname = str(WittyConf.config['witty']['nick'])
+        self.nickname = str(WittyConf.get().config['witty']['nick'])
         self.current_dir = path.abspath(path.dirname(__file__))
         self.data_dir = path.join(self.current_dir, 'data')
         if not path.exists(self.data_dir):
@@ -34,7 +33,7 @@ class WittyBot(irc.IRCClient):
             self.manager.activatePluginByName(plugin.name)
             plugin_name = plugin.name.strip().lower()
             plugin.plugin_object.plugin_name = plugin_name
-            plugin.plugin_object.config = WittyConf.config['plugins'].get(plugin_name, {})
+            plugin.plugin_object.config = WittyConf.get().config['plugins'].get(plugin_name, {})
             if hasattr(plugin.plugin_object, 'init'):
                 plugin.plugin_object.init()
 
@@ -70,7 +69,7 @@ class WittyBotFactory(protocol.ClientFactory):
 
     def __init__(self):
         self.quit = False
-        self.channels = ','.join(WittyConf.config['witty']['auto_join'])
+        self.channels = ','.join(WittyConf.get().config['witty']['auto_join'])
 
     def clientConnectionFailed(self, connector, reason):
         logging.error('Failed to connect: %s' % reason)
@@ -84,19 +83,27 @@ class WittyBotFactory(protocol.ClientFactory):
         connector.connect()
 
 
-class WittyConf(object):
-    config = None
+class WittyConf():
+    _wittyconf_ = None
+
+    def __init__(self):
+        self.config = None
 
     @staticmethod
-    def update_config():
+    def get():
+        if WittyConf._wittyconf_ is None:
+            WittyConf._wittyconf_ = WittyConf()
+        return WittyConf._wittyconf_
+
+    def update_config(self):
         with open('config.json', 'w') as fconfig:
             json.dump(WittyConf.config, fconfig, indent=4, sort_keys=True)
 
-    @staticmethod
-    def update_plugin_config(plugin_name, new_config):
+    def update_plugin_config(self, plugin_name, new_config):
+        print(self.config)
         print(new_config)
-        WittyConf.config['plugins'][plugin_name] = new_config
-        WittyConf.update_config()
+        self.config['plugins'][plugin_name] = new_config
+        self.update_config()
 
     @staticmethod
     def create_default_config():
@@ -127,26 +134,25 @@ class WittyConf(object):
         print('Created default config at ./config.json')
         sys.exit(0)
 
-    @staticmethod
-    def create_plugin_config():
+    def create_plugin_config(self):
         current_dir = path.abspath(path.dirname(__file__))
         plugin_dir = path.join(current_dir, 'plugins')
         manager = PluginManagerSingleton.get()
         manager.setPluginPlaces([plugin_dir])
         manager.collectPlugins()
-        WittyConf.config.get('plugins', {})
+        self.config.get('plugins', {})
         for plugin in manager.getAllPlugins():
             manager.activatePluginByName(plugin.name)
             if hasattr(plugin.plugin_object, 'default_config'):
-                if plugin.name.strip().lower() not in WittyConf.config['plugins']:
-                    WittyConf.config['plugins'][plugin.name.strip().lower()] = plugin.plugin_object.default_config
+                if plugin.name.strip().lower() not in self.config['plugins']:
+                    self.config['plugins'][plugin.name.strip().lower()] = plugin.plugin_object.default_config
                 else:
                     for k, v in plugin.plugin_object.default_config.items():
-                        if k not in WittyConf.config['plugins'][plugin.name.strip().lower()]:
-                            WittyConf.config['plugins'][plugin.name.strip().lower()][k] = v
+                        if k not in self.config['plugins'][plugin.name.strip().lower()]:
+                            self.config['plugins'][plugin.name.strip().lower()][k] = v
         PluginManagerSingleton._PluginManagerSingleton__instance = None
         with open('config.json', 'w') as fconfig:
-            json.dump(WittyConf.config, fconfig, indent=4, sort_keys=True)
+            json.dump(self.config, fconfig, indent=4, sort_keys=True)
         print('Updated default plugin config at ./config.json')
 
 if __name__ == '__main__':
@@ -155,12 +161,13 @@ if __name__ == '__main__':
         WittyConf.create_default_config()
     with open('config.json', 'r') as f:
         config = json.load(f)
-    WittyConf.config = config
-    WittyConf.create_plugin_config()
+    wittyconf = WittyConf.get()
+    wittyconf.config = config
+    wittyconf.create_plugin_config()
+    host = wittyconf.config['witty']['host']
+    port = wittyconf.config['witty']['port']
     witty = WittyBotFactory()
-    host = WittyConf.config['witty']['host']
-    port = WittyConf.config['witty']['port']
-    if WittyConf.config['witty']['ssl']:
+    if wittyconf.config['witty']['ssl']:
         reactor.connectSSL(str(host), int(port), witty, ssl.ClientContextFactory())
     else:
         reactor.connectTCP(str(host), int(port), witty)
