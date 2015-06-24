@@ -3,7 +3,6 @@ __author__ = 'Splitty'
 from bs4 import BeautifulSoup
 from collections import defaultdict
 from urllib2 import urlopen, URLError
-from witty import WittyConf
 from yapsy.PluginManager import PluginManagerSingleton
 from yapsy.IPlugin import IPlugin
 import logging
@@ -25,7 +24,8 @@ class BrainPlugin(IPlugin):
 
     def __init__(self):
         self.default_config = {
-            'chattiness': 100
+            'chattiness': 100,
+            'muted': []
         }
         super(BrainPlugin, self).__init__()
 
@@ -82,7 +82,17 @@ class BrainPlugin(IPlugin):
         return ' '.join(message)
 
     def privmsg(self, user, channel, msg):
-        if self.block:
+        if msg == '_unmute':
+            if channel in self.config['muted']:
+                self.config['muted'].remove(channel)
+                self.manager.wittyconf.update_plugin_config(self.plugin_name, self.config)
+                logging.info('Added channel %s to the mute list' % channel)
+        elif msg == '_mute':
+            if channel not in self.config['muted']:
+                self.config['muted'].append(channel)
+                self.manager.wittyconf.update_plugin_config(self.plugin_name, self.config)
+                logging.info('Removed channel %s from the mute list' % channel)
+        if self.block or channel in self.config['muted']:
             return
         if msg.startswith('_feed'):
             self.block = True

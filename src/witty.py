@@ -101,8 +101,6 @@ class WittyConf():
             json.dump(self.config, fconfig, indent=4, sort_keys=True)
 
     def update_plugin_config(self, plugin_name, new_config):
-        print(self.config)
-        print(new_config)
         self.config['plugins'][plugin_name] = new_config
         self.update_config()
 
