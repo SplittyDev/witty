@@ -41,3 +41,48 @@ class EchoPlugin(IPlugin):
     witty.say(channel, '%s said: %s' % (user, msg))
 
 ```
+
+### Advanced plugin example
+`advanced.yapsy-plugin`:
+```
+[Core]
+Name = Advanced plugin
+module = advanced
+
+[Documentation]
+Author = SplittyDev
+Version = 1.0
+Description = A more advanced plugin
+```
+
+`advanced.py`:
+```python
+from yapsy.IPlugin import IPlugin
+from yapsy.PluginManager import PluginManagerSingleton
+
+class AdvancedPlugin(IPlugin):
+  # automatically set by witty
+  plugin_name = None
+  config = None
+  
+  def __init__(self):
+    self.default_config = {
+      'users': []
+    }
+    super(AdvancedPlugin, self).__init__()
+  
+  # gets called by the plugin manager
+  def init(self):
+    self.manager = PluginManagerSingleton.get()
+    # fill the user list with values from the config
+    self.users = self.config['users']
+  
+  def privmsg(self, user, channel, msg):
+    if msg == '_register':
+      if not user in self.users:
+        self.users.append(user)
+        # save the user list to the config
+        self.config['users'] = self.users
+        self.manager.wittyconf.update_plugin_conf(self.plugin_name, self.config)
+        self.manager.app.say(channel, '%s registered!' % user)
+```
