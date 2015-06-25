@@ -17,7 +17,7 @@ Witty doesn't care where they are as long as it
 can find them anywhere in the `plugins` folder.
 
 `plugin_name.yapsy-plugin` should look like this:
-```
+```ini
 [Core]
 Name = Name of your plugin
 Module = Name of the python file containing your plugin code without `.py`
@@ -35,7 +35,9 @@ from yapsy.IPlugin import IPlugin
 from yapsy.PluginManager import PluginManagerSingleton
 
 class EchoPlugin(IPlugin):
+  # called by witty when a message arrives
   def privmsg(self, user, channel, msg):
+    # get the bot instance
     witty = PluginManagerSingleton.get().app
     # echo everything said in the channel
     witty.say(channel, '%s said: %s' % (user, msg))
@@ -44,7 +46,7 @@ class EchoPlugin(IPlugin):
 
 ### Advanced plugin example
 `advanced.yapsy-plugin`:
-```
+```ini
 [Core]
 Name = Advanced plugin
 module = advanced
@@ -62,21 +64,23 @@ from yapsy.PluginManager import PluginManagerSingleton
 
 class AdvancedPlugin(IPlugin):
   # automatically set by witty
+  # doesn't need to be declared here
   plugin_name = None
   config = None
   
-  def __init__(self):
-    self.default_config = {
-      'users': []
-    }
-    super(AdvancedPlugin, self).__init__()
+  # optional, used by witty
+  usage = '_register'
+  default_config = {
+    'users': []
+  }
   
-  # gets called by the plugin manager
+  # called by witty on startup and plugin reload
   def init(self):
     self.manager = PluginManagerSingleton.get()
     # fill the user list with values from the config
     self.users = self.config['users']
   
+  # called by witty when a message arrives
   def privmsg(self, user, channel, msg):
     if msg == '_register':
       if not user in self.users:
