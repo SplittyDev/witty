@@ -50,6 +50,11 @@ class AdminUtilsPlugin(IPlugin):
         elif authenticated and msg.startswith('_quit'):
             self.app.quit(str(msg[5:]).strip())
 
+        # send latest logs to user
+        elif authenticated and msg.startswith('_log'):
+            count = int(msg[5:].strip())
+            self.send_logs(user, count)
+
         # not authenticated
         elif not authenticated:
             self.app.say(channel, 'You don\'t have permission to do that!')
@@ -64,7 +69,7 @@ class AdminUtilsPlugin(IPlugin):
     def give_operator_status(self, channel, user):
         if user not in self.config['admins']:
             self.config['admins'].append(user)
-            self.manager.wittyconf.update_plugin_config(self.plugin_name, self.config)
+            self.wittyconf.update_plugin_config(self.plugin_name, self.config)
             self.app.say(channel, 'Gave %s permission to use adminutils.' % user)
 
     def take_operator_status(self, channel, user):
@@ -74,10 +79,24 @@ class AdminUtilsPlugin(IPlugin):
             removed += 1
         if removed > 0:
             self.app.say(channel, 'Took admin permissions from %s' % user)
-            self.manager.wittyconf.update_plugin_config(self.plugin_name, self.config)
+            self.wittyconf.update_plugin_config(self.plugin_name, self.config)
 
     def rehash(self, channel):
         PluginManagerSingleton._PluginManagerSingleton__instance = None
         self.app.load_plugins()
         self.manager = PluginManagerSingleton.get()
         self.app.say(channel, 'Plugins rehashed.')
+
+    def send_logs(self, user, count):
+        f = open('witty.log', 'r')
+        lines = []
+        for line in f:
+            lines.append(line)
+        f.close()
+        if count <= len(lines):
+            result = []
+            for i in range(len(lines) - count, len(lines), 1):
+                result.append('%i %s' % (i, lines[i]))
+                self.app.msg(user, '\n'.join(result))
+            else:
+                self.app.msg(user, 'Only %i lines in witty.log' % len(lines))

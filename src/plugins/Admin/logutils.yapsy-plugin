@@ -1,8 +1,0 @@
-[Core]
-Name = Logging utilities
-Module = logutils
-
-[Documentation]
-Author = SplittyDev
-Version = 1.0
-Description = Utilities for reading the log
