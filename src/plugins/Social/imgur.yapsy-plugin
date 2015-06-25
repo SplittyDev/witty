@@ -5,4 +5,4 @@ Module = imgur
 [Documentation]
 Author = SplittyDev
 Version = 1.0
-Description = imgur URL handler
+Description = [Passive] URL handler: imgur

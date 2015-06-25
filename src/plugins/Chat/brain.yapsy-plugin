@@ -1,8 +1,8 @@
 [Core]
-Name = Brain
+Name = talkybrain
 Module = brain
 
 [Documentation]
 Author = SplittyDev
 Version = 1.0
-Description = Talky bot using continuous-time markov processing
+Description = [Passive] Talky bot using continuous-time markov processing

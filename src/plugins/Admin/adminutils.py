@@ -23,14 +23,23 @@ class AdminUtilsPlugin(IPlugin):
     def privmsg(self, user, channel, msg):
         authenticated = False if user not in self.config['admins'] else True
 
-        # reload config + rehash plugins
-        if authenticated and msg == '_rehash':
-            self.manager.wittyconf.reload_config()
-            self.rehash(channel)
-
         # list operators
         if msg == '_ops':
             self.list_operators(channel)
+
+        # help
+        elif msg == '_help':
+            self.help(channel)
+
+        # plugin help
+        elif msg.startswith('_help'):
+            plugin_name = msg[5:].strip()
+            self.help_plugin(channel, plugin_name)
+
+        # reload config + rehash plugins
+        elif authenticated and msg == '_rehash':
+            self.manager.wittyconf.reload_config()
+            self.rehash(channel)
 
         # give operator status
         elif authenticated and msg.startswith('_op'):
@@ -38,16 +47,16 @@ class AdminUtilsPlugin(IPlugin):
             self.give_operator_status(channel, _user)
 
         # take operator status
-        if authenticated and msg.startswith('_deop'):
+        elif authenticated and msg.startswith('_deop'):
             _user = msg[5:].strip()
             self.take_operator_status(channel, _user)
 
         # quit
-        if authenticated and msg == '_quit':
+        elif authenticated and msg == '_quit':
             self.app.quit('bye')
 
         # quit with message
-        if authenticated and msg.startswith('_quit'):
+        elif authenticated and msg.startswith('_quit'):
             self.app.quit(str(msg[5:]).strip())
 
         # send latest logs to user
@@ -96,3 +105,23 @@ class AdminUtilsPlugin(IPlugin):
                 self.app.msg(user, '\n'.join(result))
             else:
                 self.app.msg(user, 'Only %i lines in witty.log' % len(lines))
+
+    def help(self, channel):
+        plugins = []
+        for plugin in self.manager.getAllPlugins():
+            plugins.append(plugin.name)
+        msg = 'Plugins: %s' % str(' | '.join(plugins))
+        self.app.say(channel, msg)
+
+    def help_plugin(self, channel, plugin_name):
+        description = None
+        usage = None
+        for plugin in self.manager.getAllPlugins():
+            if plugin_name == plugin.name:
+                description = str(plugin.description)
+                if hasattr(plugin.plugin_object, 'usage'):
+                    usage = str(plugin.plugin_object.usage)
+        if usage is not None:
+            self.app.say(channel, 'Usage: %s' % usage)
+        if description is not None:
+            self.app.say(channel, 'Description: %s' % description)

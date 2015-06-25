@@ -6,6 +6,8 @@ from yapsy.PluginManager import PluginManagerSingleton
 from yapsy.IPlugin import IPlugin
 
 class NpmPlugin(IPlugin):
+    usage = '_npm <package>'
+
     def privmsg(self, user, channel, msg):
         manager = PluginManagerSingleton.get()
         if str(msg).startswith('_npm'):
