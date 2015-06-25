@@ -29,7 +29,7 @@ class AdminUtilsPlugin(IPlugin):
             self.rehash(channel)
 
         # list operators
-        elif msg == '_ops':
+        if msg == '_ops':
             self.list_operators(channel)
 
         # give operator status
@@ -38,26 +38,22 @@ class AdminUtilsPlugin(IPlugin):
             self.give_operator_status(channel, _user)
 
         # take operator status
-        elif authenticated and msg.startswith('_deop'):
+        if authenticated and msg.startswith('_deop'):
             _user = msg[5:].strip()
             self.take_operator_status(channel, _user)
 
         # quit
-        elif authenticated and msg == '_quit':
+        if authenticated and msg == '_quit':
             self.app.quit('bye')
 
         # quit with message
-        elif authenticated and msg.startswith('_quit'):
+        if authenticated and msg.startswith('_quit'):
             self.app.quit(str(msg[5:]).strip())
 
         # send latest logs to user
         elif authenticated and msg.startswith('_log'):
             count = int(msg[5:].strip())
             self.send_logs(user, count)
-
-        # not authenticated
-        elif not authenticated:
-            self.app.say(channel, 'You don\'t have permission to do that!')
 
     def list_operators(self, channel):
         if not self.config['admins']:

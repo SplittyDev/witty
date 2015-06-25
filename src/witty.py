@@ -69,7 +69,6 @@ class WittyBot(irc.IRCClient):
         self.join(str(channel))
 
     def quit(self, message=''):
-        self.update_config()
         self.factory.quit = True
         irc.IRCClient.quit(self, message)
 
