@@ -133,6 +133,10 @@ class WittyConf():
         print('Created default config at ./config.json')
         sys.exit(0)
 
+    def reload_config(self):
+        with open('config.json', 'r') as fconfig:
+            self.config = json.load(fconfig)
+
     def create_plugin_config(self):
         current_dir = path.abspath(path.dirname(__file__))
         plugin_dir = path.join(current_dir, 'plugins')
