@@ -2,9 +2,13 @@
 A small irc bot with plugin support.
 
 ## Dependencies
-- Twisted
-- yapsy
+- [Twisted](https://pypi.python.org/pypi/Twisted)
+- [Yapsy](https://pypi.python.org/pypi/yapsy)
+- [pyOpenSSL](https://pypi.python.org/pypi/pyOpenSSL)
 - Python 2.7
+
+Optional:
+- [service_identity](https://pypi.python.org/pypi/service_identity)
 
 ## Plugins
 ### How to write a plugin
