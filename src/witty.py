@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 __author__ = 'Splitty'
 
+import imp
 import json
 import logging
 from os import makedirs, path
@@ -206,6 +207,24 @@ class WittyConf:
 if __name__ == '__main__':
     # configure logger
     logging.basicConfig(filename='witty.log', level=logging.INFO)
+
+    missing_modules = []
+
+    def check_module(module_name):
+        try:
+            imp.find_module(module_name)
+        except ImportError:
+            missing_modules.append(module_name)
+
+    check_module('bs4')
+    check_module('cryptography')
+    check_module('twisted')
+    check_module('yapsy')
+
+    if missing_modules:
+        for module in missing_modules:
+            print('Could not find module \'%s\'.' % module)
+        sys.exit(1)
 
     # load the configuration if it exists
     # if not: create a default configuration
