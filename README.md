@@ -5,6 +5,7 @@ A small irc bot with plugin support.
 - [Twisted](https://pypi.python.org/pypi/Twisted)
 - [Yapsy](https://pypi.python.org/pypi/yapsy)
 - [pyOpenSSL](https://pypi.python.org/pypi/pyOpenSSL)
+- [beautifulsoup4](https://pypi.python.org/pypi/beautifulsoup4)
 - Python 2.7
 
 Optional:
