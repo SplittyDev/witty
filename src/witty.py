@@ -10,7 +10,6 @@ from twisted.words.protocols import irc
 from twisted.internet import protocol, reactor, ssl
 from yapsy.PluginManager import PluginManagerSingleton
 
-
 class WittyBot(irc.IRCClient):
     data_dir = ''
     manager = None
